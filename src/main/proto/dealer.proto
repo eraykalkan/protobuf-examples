@@ -1,0 +1,13 @@
+syntax="proto3";
+
+import "common/car.proto";
+
+
+option java_multiple_files = true;
+
+// generate class in the following package
+option java_package = "com.eraykalkan.models";
+
+message Dealer {
+  map<int32,common.Car> model = 1;
+}

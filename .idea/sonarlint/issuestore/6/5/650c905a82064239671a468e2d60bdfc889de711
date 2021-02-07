@@ -1,0 +1,10 @@
+
+Q
+java:S1481"/Remove this unused "personJson" local variable.(Ù›¾˜ûÿÿÿÿ8€©Ñ‘ö.
+a
+java:S2147 "DCombine this catch with the one at line 30, which has the same body.(ï­£Ä8€©Ñ‘ö.
+Z	java:S106C"9Replace this use of System.out or System.err by a logger.(ƒÙæøÿÿÿÿ8îâÃ‘ö.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(×Ì²„8Áµ±¿ö.
+U	java:S106/"9Replace this use of System.out or System.err by a logger.(×Ì²„8ì…²¿ö.
+F
+java:S14810")Remove this unused "eray" local variable.(°ûª¾8–Ç×‘ö.

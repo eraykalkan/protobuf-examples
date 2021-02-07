@@ -1,0 +1,60 @@
+syntax="proto3";
+// we are using proto3, in proto2 you have the add labels to fields to tell that they are mandatory or optional
+// proto1 is only for google to use internally
+
+import "address.proto";
+import "common/car.proto";
+
+// to use wrapper classes
+import "google/protobuf/wrappers.proto";
+
+// destructure the entire PersonOuterClass to its inner classes
+// so that we can use inner Person class
+option java_multiple_files = true;
+
+// generate class in the following package
+option java_package = "com.eraykalkan.models";
+
+
+
+message Person {
+  string name = 1; // not assignment, it means it is the first parameter, 1 is tag
+  int32 age = 2;
+  Address address = 3;
+  repeated common.Car car = 20; // List
+  google.protobuf.Int32Value birthYear = 5;
+}
+
+// in Json the object is mapped as:
+// "name":"eray",
+// "age":30
+
+// in protocol buffers, the object is mapped as:
+// 1=eray
+// 2=30
+// that's why the byte array is smaller in size on protobuf
+// the tag is whatever number we want but:
+// 1-15 it uses 1 byte
+// 16-2047 uses 2 bytes
+// so 2 byte tags should be used for not frequently used fields
+// 1 byte tags should be reserved for frequently used or mandatory fields
+// 1 is the smallest
+
+// if let say in api version 2, we want to deprecate a field
+// we should not just comment it out or delete the field from model
+// instead we have to mark it as reserved:
+// otherwise it is dangerous because someone might use that tag on a field and the older APIs will receive wrong data
+/*message Person {
+  string name = 1;
+
+  reserved 2; // for deprecated fields we use reserved key word. we can even say 2 to 14
+  reserved "age";
+  //when a field is marked as reserved, no one can use "2" from now on
+
+  int32 year = 3;
+  Address address = 3;
+  repeated common.Car car = 20; // List
+  google.protobuf.Int32Value birthYear = 5;
+
+}
+ */

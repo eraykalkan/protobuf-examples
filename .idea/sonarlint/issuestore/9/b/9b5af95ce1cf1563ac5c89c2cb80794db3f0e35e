@@ -1,0 +1,8 @@
+
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ıëè8„ƒ¿ö.
+K
+java:S1481")Remove this unused "eray" local variable.(ˆ³şÿÿÿÿ8×ô”‘ö.
+]	java:S125"<This block of commented-out lines of code should be removed.(ËÊ´¯úÿÿÿÿ8×ô”‘ö.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Äˆª8‚¡”‘ö.
+Z
+java:S1854"8Remove this useless assignment to local variable "eray".(ˆ³şÿÿÿÿ8×ô”‘ö.

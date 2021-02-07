@@ -1,0 +1,12 @@
+syntax="proto3";
+
+option java_multiple_files = true;
+
+// generate class in the following package
+option java_package = "com.eraykalkan.models";
+
+message Address {
+  int32 postbox = 1;
+  string street = 2;
+  string city = 3;
+}
