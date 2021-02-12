@@ -10,7 +10,7 @@ import com.eraykalkan.models.PhoneOTP;
  * in this example, let's suppose we have two credentials to login
  * one is email, the other is via phone otp
  * if we set both in the credentials, the result will be the last set one
- * previousluy set objects will be erased
+ * previously set objects will be erased
  * we only need to set one and use it for oneof
  * we can also add an error to the object to show in default case
  */
