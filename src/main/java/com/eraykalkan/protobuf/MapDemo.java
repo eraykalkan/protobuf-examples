@@ -32,7 +32,7 @@ public class MapDemo {
 
         // if we don't set a value for enum, the first index will be picked
         // it is going to output SEDAN which is at the 0th index
-        // we need a default case for enum ie. UNNOWN = 0
+        // we need a default case for enum ie. UNKNOWN = 0
         System.out.println(dealer.getModelOrThrow(2009).getBodyStyle());
 
     }
